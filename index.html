@@ -558,6 +558,166 @@ h3{
   line-height:1.9;
   max-width:1080px;
 }
+
+/* Codex revision: larger readable body text */
+.slide .card p,
+.slide .row p,
+.slide .lead,
+.slide .feature-card p,
+.slide .side-note p,
+.slide .content-main > p,
+.slide .item-text p,
+.slide small {
+  font-size: clamp(1.22rem, 1.62vw, 1.58rem) !important;
+  line-height: 1.82 !important;
+}
+.slide .card h3,
+.slide .row strong {
+  font-size: clamp(1.25rem, 1.72vw, 1.72rem) !important;
+}
+.slide .mini-label,
+.slide .chapter,
+.slide .label {
+  font-size: clamp(0.88rem, 1.05vw, 1.08rem) !important;
+}
+
+
+/* Harness slide: six elements need room without shrinking into footnotes */
+.harness-slide .content-main{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-content:center;
+  gap:clamp(0.9rem,1.6vw,1.35rem) clamp(2rem,3.2vw,3.2rem);
+  padding:clamp(1.8rem,3vw,3rem) var(--pad);
+}
+.harness-slide .item-row{
+  min-height:clamp(5.4rem,10.2vh,7.1rem);
+  gap:clamp(0.85rem,1.2vw,1.1rem);
+  padding:clamp(0.75rem,1.15vh,0.95rem) 0;
+  align-items:flex-start;
+}
+.harness-slide .item-index{
+  font-size:clamp(0.82rem,1vw,0.96rem);
+  min-width:3.1em;
+  padding-top:0.15rem;
+}
+.harness-slide .item-text h3{
+  font-size:clamp(1.38rem,1.9vw,1.78rem)!important;
+  line-height:1.18!important;
+  margin-bottom:0.24rem;
+}
+.harness-slide .item-text p{
+  font-size:clamp(1.08rem,1.44vw,1.34rem)!important;
+  line-height:1.56!important;
+  max-width:32em;
+}
+
+.legal-agent-slide .content-main{
+  justify-content:center;
+  padding:clamp(1.5rem,2.6vw,2.6rem) var(--pad);
+}
+.legal-agent-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(0.8rem,1.35vw,1.25rem);
+  align-content:center;
+}
+.legal-agent-card{
+  border-top:2px solid var(--ink);
+  border-left:4px solid var(--accent);
+  padding:clamp(0.85rem,1.25vw,1.15rem);
+  background:rgba(242,240,235,0.82);
+  min-height:clamp(165px,20vh,215px);
+  display:flex;
+  flex-direction:column;
+}
+.legal-agent-card .tag{
+  font-family:var(--f-mono);
+  color:var(--accent);
+  font-size:clamp(0.74rem,0.9vw,0.88rem);
+  margin-bottom:0.55rem;
+}
+.legal-agent-card h3{
+  font-size:clamp(1.08rem,1.42vw,1.36rem)!important;
+  line-height:1.25!important;
+  margin-bottom:0.45rem;
+  text-transform:none;
+}
+.legal-agent-card p{
+  font-size:clamp(0.95rem,1.18vw,1.12rem)!important;
+  line-height:1.55!important;
+}
+
+.stanford-slide .content-sidebar .sidebar-num{
+  font-size:clamp(2.8rem,5vw,4.8rem);
+}
+.stanford-slide .content-main{
+  justify-content:center;
+  padding:clamp(2rem,3.3vw,3.6rem) var(--pad);
+}
+.stanford-stat-wrap{
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(280px,0.65fr);
+  gap:clamp(1rem,2vw,1.8rem);
+  align-items:stretch;
+}
+.stanford-stat-block{
+  border-top:4px solid var(--accent);
+  border-bottom:2px solid var(--ink);
+  padding:clamp(1.2rem,2.2vw,2rem) clamp(1rem,1.8vw,1.6rem);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:clamp(340px,50vh,500px);
+}
+.stanford-stat-label{
+  font-family:var(--f-mono);
+  color:var(--mid);
+  font-size:clamp(0.82rem,1vw,0.98rem);
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+.stanford-number{
+  font-family:var(--f-display);
+  color:var(--accent);
+  font-size:clamp(6.5rem,12vw,11rem);
+  line-height:0.82;
+  letter-spacing:-0.015em;
+  white-space:nowrap;
+  margin:clamp(0.6rem,1.4vw,1.2rem) 0;
+}
+.stanford-stat-block p{
+  max-width:760px;
+  font-size:clamp(1.12rem,1.55vw,1.42rem)!important;
+  line-height:1.72!important;
+}
+.stanford-bottomline{
+  background:var(--ink);
+  color:var(--bg);
+  padding:clamp(1.3rem,2.2vw,2rem);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:clamp(340px,50vh,500px);
+}
+.stanford-bottomline .label{
+  color:var(--accent)!important;
+}
+.stanford-bottomline h3{
+  color:var(--bg);
+  font-size:clamp(1.65rem,2.65vw,2.55rem)!important;
+  line-height:1.3!important;
+  text-transform:none;
+  letter-spacing:0;
+}
+.stanford-bottomline p{
+  color:rgba(242,240,235,0.72);
+  font-size:clamp(1rem,1.32vw,1.22rem)!important;
+  line-height:1.65!important;
+}
+
 </style>
 </head>
 <body>
@@ -566,8 +726,7 @@ h3{
 
 <div class="deck" id="deck">
 
-<!-- 1 封面 -->
-  <section class="slide slide-cover active" data-index="1" data-title="封面">
+<section class="slide slide-cover active" data-index="1" data-title="封面">
     <div class="cover-meta">
       <div class="label">AI 歧路花园</div>
       <div class="label">杜思敏 · 大成（成都）律师事务所</div>
@@ -575,14 +734,14 @@ h3{
     <div class="cover-body">
       <span class="rule-accent" style="margin-bottom:1.5rem"></span>
       <h1 class="reveal" style="--i:0; font-size:clamp(3.8rem,7vw,6.2rem)"><span class="nowrap">律师 + <span class="accent">AI</span></span></h1>
-      <p class="reveal" style="--i:1; margin-top:1.2rem; max-width:340px">高效协作公式与未来竞争力 —— 从对话框到 Agent，从工具使用到协作系统，再回到判断与信任。</p>
+      <p class="reveal" style="--i:1; margin-top:1.3rem; max-width:520px; font-size:clamp(1.45rem,2.25vw,2.15rem);line-height:1.45;font-weight:700;color:var(--ink);">高效协作公式与未来竞争力</p>
     </div>
     <div class="cover-right">
       <div class="n">01</div>
       <div style="display:flex; flex-direction:column; gap:0.7rem">
-        <div class="label reveal" style="--i:2">课程目录</div>
-        <div class="item-row reveal" style="--i:3; border-color:rgba(0,0,0,0.1)"><span class="item-index">01</span><div class="item-text"><h3>从 AI 问答到 AI 同事</h3></div></div>
-        <div class="item-row reveal" style="--i:4; border-color:rgba(0,0,0,0.1)"><span class="item-index">02</span><div class="item-text"><h3>Agent 能力版图</h3></div></div>
+        <div class="label reveal" style="--i:2">分享提纲</div>
+        <div class="item-row reveal" style="--i:3; border-color:rgba(0,0,0,0.1)"><span class="item-index">01</span><div class="item-text"><h3>法律为什么是 AI 天选之地</h3></div></div>
+        <div class="item-row reveal" style="--i:4; border-color:rgba(0,0,0,0.1)"><span class="item-index">02</span><div class="item-text"><h3>Agent 办公</h3></div></div>
         <div class="item-row reveal" style="--i:5; border-color:rgba(0,0,0,0.1)"><span class="item-index">03</span><div class="item-text"><h3>高效协作公式</h3></div></div>
         <div class="item-row reveal" style="--i:6; border-color:rgba(0,0,0,0.1)"><span class="item-index">04</span><div class="item-text"><h3>Skill / MCP / CLI</h3></div></div>
         <div class="item-row reveal" style="--i:7; border-color:rgba(0,0,0,0.1)"><span class="item-index">05</span><div class="item-text"><h3>未来竞争力</h3></div></div>
@@ -593,113 +752,88 @@ h3{
       <div class="label">民商事诉讼律师 · AI 工作法</div>
     </div>
   </section>
-  <!-- 2 自我介绍 -->
-  <section class="slide slide-content" data-index="2" data-title="讲者介绍">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>讲者介绍</h2><p style="margin-top:0.2rem">争议解决实务中的 AI 工作法</p></div><div class="label red" style="margin-left:auto">开场</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0; font-size:clamp(3.2rem,6vw,5.2rem)">INFO</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 深度融入争议解决实务。</p></div>
+
+<section class="slide slide-content" data-index="2" data-title="讲者介绍">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>讲者介绍</h2><p style="margin-top:0.2rem"></p></div><div class="label red" style="margin-left:auto">开场</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">INFO</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 深度融入争议解决实务。</p></div>
     <div class="content-main">
-      <p class="reveal bio-line" style="--i:2"><strong style="color:var(--accent); font-weight:700">杜思敏</strong>，北京大成（成都）律师事务所律师，将 AI 深度融入争议解决实务，用 AI 重构办案流，多次受邀进行 AI 实务分享，公众号「AI歧路花园」作者，小红书：Mira魔法研究员。</p>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">实践</span><div class="item-text"><h3>AI + 争议解决</h3><p>材料整理、期限管理、Skill、MCP、案件工作流，均来自真实办案场景。</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">分享</span><div class="item-text"><h3>AI 实务分享</h3><p>面向律师同行，围绕工具、流程、判断和交付展开。</p></div></div>
-      <div class="n">02</div>
+      <p class="bio-line"><strong style="font-size:1.25em;color:var(--ink);">杜思敏</strong>，北京大成（成都）律师事务所律师，将 AI 深度融入争议解决实务，用 AI 重构办案流，多次受邀进行 AI 实务分享，公众号「AI歧路花园」作者，小红书：Mira魔法研究员。</p>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">实践</span><div class="item-text"><h3>AI + 争议解决</h3><p>材料整理、期限管理、Skill、MCP、案件工作流，均来自真实办案场景。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">分享</span><div class="item-text"><h3>AI 实务分享</h3><p>面向律师同行，围绕工具、流程、判断和交付展开。</p></div></div>
     </div>
   </section>
 
-  <!-- 3 破题 重划门槛 -->
-  <section class="slide slide-content" data-index="3" data-title="破题">
+<section class="slide slide-content" data-index="3" data-title="破题">
     <div class="content-label"><span class="rule-accent"></span><div><h2>工具升级，正在重划门槛</h2><p style="margin-top:0.2rem">文本密集的行业，最先被重塑</p></div><div class="label red" style="margin-left:auto">开场</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">法律，跑不掉，也最有机会。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>代码</h3><p>最强的工程师，正把大部分编码交给 AI。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>设计</h3><p>一句话出图、出页面，门槛被抹平。</p></div></div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>Cursor</h3><p>编程从“写代码”走向“说清目标、读懂结构、持续调试”。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>Lovable</h3><p>产品原型从“会设计软件”走向“会描述需求、会验收结果”。</p></div></div>
       <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3 style="color:var(--accent)">法律</h3><p>天然的长文本行业——正是大模型的"老本行"。</p></div></div>
       <div class="n">03</div>
     </div>
   </section>
-  <!-- 4 开场问题 -->
-  <section class="slide" data-index="4" data-title="开场问题" style="display:flex; flex-direction:column">
-    <div class="take-header"><span class="rule-accent"></span><div class="label">开场 · 一个现实问题</div></div>
-    <div class="take-body"><div>
-      <div class="take-quote reveal" style="--i:0">工具越来越多，<br><em>关键在流程</em>。</div>
-      <p class="reveal" style="--i:1; margin-top:1.5rem; max-width:760px">法律工作天然是多步骤流程：材料、判断、交付、复核。AI 的价值，要放进这条流程里看。</p>
-    </div></div>
-    <div class="n">04</div>
+
+<section class="slide slide-part" data-index="4" data-title="法律为什么是AI天选之地">
+    <div class="part-header"><div class="label red">Part 01</div><div class="label">法律为什么是 AI 天选之地</div></div>
+    <div class="part-body"><div class="part-no">01</div><h2>法律为什么是 AI 天选之地</h2><p>法律工作天然适合拆解、协作、复用和校验。</p></div>
   </section>
-  <!-- 5 课程目录 -->
-  <section class="slide slide-content" data-index="5" data-title="课程目录">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>课程目录</h2><p style="margin-top:0.2rem">从工具使用到协作系统</p></div><div class="label red" style="margin-left:auto">开场</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">四条主线，最后回到两个公式。</p></div>
+
+<section class="slide slide-content" data-index="5" data-title="法律多步骤流程">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>法律工作天然是多步骤流程</h2><p style="margin-top:0.2rem">从咨询到交付，本来就是一条产线</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">问</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 更适合进入流程，成为持续推进工作的系统。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>从对话框到 Agent</h3><p>AI 从生成答案走向推进任务。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>Agent 能力版图</h3><p>通用 Agent、办公 Agent、Coding Agent、法律垂直 AI。</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>高效协作公式</h3><p>拆解 × 约束 × 校验 ×（沉淀）。</p></div></div>
-      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>Skill / MCP / CLI</h3><p>把工作方法、外部系统和本地工具接入 AI 工作流。</p></div></div>
-      <div class="item-row reveal" style="--i:6"><span class="item-index">05</span><div class="item-text"><h3>未来竞争力</h3><p>AI 完成任务，律师定义问题、承担判断、安顿信任。</p></div></div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>输入多</h3><p>合同、证据、聊天记录、判例、法规、客户事实，天然需要组织。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>步骤长</h3><p>检索、归纳、比对、论证、起草、校验、定稿，每一步都有明确任务。</p></div></div>
       <div class="n">05</div>
     </div>
   </section>
 
-  <!-- Part 1 -->
-  <section class="slide slide-part" data-index="6" data-title="第一部分">
-    <div class="part-header"><div class="label red">Part 01</div><div class="label">从 AI 问答到 AI 同事</div></div>
-    <div class="part-body">
-      <div class="part-num">01</div>
-      <div class="part-title-block">
-        <span class="rule-accent" style="margin-bottom:1.2rem; display:block"></span>
-        <h2 class="reveal" style="--i:0">从 AI 问答<br>到 <span style="color:var(--accent)">AI 同事</span></h2>
-        <div class="part-progress reveal" style="--i:1; margin-top:1.5rem"><div class="prog-seg active"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
-        <p class="reveal" style="--i:2; margin-top:0.8rem">把 Agent 的技术原理讲清楚</p>
-      </div>
+<section class="slide slide-content" data-index="6" data-title="任务流程化">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>法律工作的天然优势：任务可拆解</h2><p style="margin-top:0.2rem">流程化、清单化、标准化，是法律服务多年形成的工作底座</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">SOP</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">律师经验抽象出来的 SOP，就是法律 Agent 的工作流。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>任务流程化</h3><p>合同审查有审查清单，案件办理有办案规范，尽调有尽调清单。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>SOP 被律师反复打磨</h3><p>每一步该做什么、先做什么后做什么，大量实务经验已经被写进方法论。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>隐性知识显性化，显性知识标准化</h3><p>把已经存在、被验证过的工作流程，用 Agent 复现。</p></div></div>
     </div>
   </section>
 
-  <!-- 7 对话框 -->
-  <section class="slide slide-content" data-index="7" data-title="对话框">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>我们最熟悉的"对话框"</h2><p style="margin-top:0.2rem">像随时能请教的聪明人</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">问</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">当成"办公入口"，就会撞上三个天花板。</p></div>
+<section class="slide slide-content" data-index="7" data-title="拆解后可执行">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>拆解后的步骤，可以直接用工具落地</h2><p style="margin-top:0.2rem">法律任务拆小以后，就进入 Agent 的工作方式</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">→</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">任务拆解 → 工具调用 → 反馈迭代 → 再循环。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>典型产品</h3><p>DeepSeek · Kimi · 豆包 · 通义 · ChatGPT</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>典型动作</h3><p>摘要 · 改写 · 翻译 · 起草邮件 · 解释概念</p></div></div>
-      <div class="n">07</div>
-    </div>
-  </section>
-  <!-- 8 三天花板 -->
-  <section class="slide slide-content" data-index="8" data-title="三个天花板">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>对话框的三个天花板</h2><p style="margin-top:0.2rem">把它当办公入口的结构性限制</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">这是工作结构本身的问题。</p></div>
-    <div class="content-main">
-      <div class="visual-triad">
-        <div class="visual-card reveal" style="--i:2">
-          <div><div class="visual-mark">01</div><h3>文件孤岛</h3></div>
-          <p>案件材料往往是一整个文件夹，对话框只能看到被粘贴进去的片段，人工持续搬运。</p>
-        </div>
-        <div class="visual-card reveal" style="--i:3">
-          <div><div class="visual-mark">02</div><h3>流程断点</h3></div>
-          <p>一问一答缺少持续工作记忆。回答之后，仍需复制、改格式、建表、存档、转发。</p>
-        </div>
-        <div class="visual-card reveal" style="--i:4">
-          <div><div class="visual-mark">03</div><h3>经验归零</h3></div>
-          <p>格式、边界、口吻留在单次对话中，工作方法没有进入系统。</p>
-        </div>
-      </div>
-      <div class="n">08</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>信息提取</h3><p>识别合同、文书中的主体、金额、日期、条款、材料类型。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>检索匹配</h3><p>调用法条、案例、文书模板、行业资料。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>生成产物</h3><p>形成清单、表格、报告、函件、文书。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>反馈迭代</h3><p>根据结果调整检索、重排结构、补充核验。</p></div></div>
     </div>
   </section>
 
-  <!-- 9 更会干活 -->
-  <section class="slide slide-content" data-index="9" data-title="更会干活">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>它更会"干活"</h2><p style="margin-top:0.2rem">从"回答"到"交付"</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">VS</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">对话框生成一段话；Agent 产出一份活儿。</p></div>
+<section class="slide slide-content" data-index="8" data-title="法律人的编程思维">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>法律人本来就有“编程思维”</h2><p style="margin-top:0.2rem">把已有工作方法换一个角度落地</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">拆解、复用、自动化、迭代。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">旧</span><div class="item-text"><h3>做证据目录 · 对话框</h3><p>生成一个“证据目录的格式”，后续仍需人工填充。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index" style="color:var(--accent)">新</span><div class="item-text"><h3 style="color:var(--accent)">做证据目录 · Agent</h3><p>读整个材料文件夹 → 分类 → 提取日期 → 生成证据目录初稿，存进工作空间。</p></div></div>
-      <div class="n">09</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>问题拆解</h3><p>复杂合同先看主体资格，再看核心条款，然后关联法规，最后标注风险。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>抽象复用</h3><p>反复检查的条款，提取成审查清单；反复办理的事项，沉淀成流程。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>自动化</h3><p>重复事项进入工具和 Agent 工作流。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>迭代优化</h3><p>先跑第一版，再根据真实错误持续改进。</p></div></div>
     </div>
   </section>
 
-  <!-- 10 Agent定义 + Model+Harness -->
-  <section class="slide slide-content" data-index="10" data-title="Agent是什么">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>Agent ＝ Model ＋ Harness</h2><p style="margin-top:0.2rem">一个权威而朴素的定义</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
+<section class="slide slide-content" data-index="9" data-title="法律团队作战">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>法律也是团队作战</h2><p style="margin-top:0.2rem">法律团队的分工结构，本来就适合 Agent 协作</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">协</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">这种天然角色分工，正是构建 Agent 各司其职、互相协作的基础。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">判断</span><div class="item-text"><h3>资深律师</h3><p>负责法律判断、方案取舍、对外沟通和最终责任。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">文书</span><div class="item-text"><h3>助理律师</h3><p>整理证据、起草文书、推进材料和节点。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">检索</span><div class="item-text"><h3>实习生</h3><p>检索案例、提取信息、完成基础比对。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">流程</span><div class="item-text"><h3>项目经理</h3><p>跟进任务、提醒异常、维护进度和交付物。</p></div></div>
+    </div>
+  </section>
+
+<section class="slide slide-content" data-index="10" data-title="Agent是什么">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>Agent ＝ Model ＋ Harness</h2><p style="margin-top:0.2rem">一个权威而朴素的定义</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">def</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">Anthropic：大模型在一个"循环"里，自主地使用工具。</p></div>
     <div class="content-main">
       <div class="reveal" style="--i:2; font-family:var(--f-display); font-size:clamp(1.6rem,3.4vw,2.8rem); line-height:1; letter-spacing:0.02em">Agent ＝ <span style="color:var(--accent)">Model</span> ＋ Harness</div>
@@ -709,142 +843,101 @@ h3{
     </div>
   </section>
 
-  <!-- 11 Harness六件 -->
-  <section class="slide slide-content" data-index="11" data-title="Harness六件">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>Harness ＝ 六件事</h2><p style="margin-top:0.2rem">Agent 多出来的"工作结构"</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">6</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">Anthropic 专文《长任务的有效 Harness》。</p></div>
-    <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>任务目标</h3><p>说清"最后要交付什么"</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>上下文</h3><p>进入资料现场（上下文工程）</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>工具</h3><p>不只会说，还能操作</p></div></div>
-      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>执行过程</h3><p>先规划、再执行、再调整</p></div></div>
-      <div class="item-row reveal" style="--i:6"><span class="item-index">05</span><div class="item-text"><h3>人工介入</h3><p>关键节点把方向盘拿回来</p></div></div>
-      <div class="item-row reveal" style="--i:7"><span class="item-index">06</span><div class="item-text"><h3>结果验收</h3><p>看交付物，不只看聊天</p></div></div>
+<section class="slide slide-content harness-slide" data-index="11" data-title="Harness里面有什么">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>Harness 里面有什么？</h2><p style="margin-top:0.2rem">Agent 多出来的“工作结构”</p></div><div class="label red" style="margin-left:auto">01 · 法律与 AI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">6</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">让模型从会回答，走向能交付。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>任务目标</h3><p>最后要交付什么。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>上下文</h3><p>进入资料现场。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>工具</h3><p>会操作，也会表达。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>执行过程</h3><p>规划、执行、调整。</p></div></div>
+      <div class="item-row reveal" style="--i:6"><span class="item-index">05</span><div class="item-text"><h3>人工介入</h3><p>关键节点回到律师判断。</p></div></div>
+      <div class="item-row reveal" style="--i:7"><span class="item-index">06</span><div class="item-text"><h3>结果验收</h3><p>看交付物，也看过程记录。</p></div></div>
     </div>
   </section>
 
-  <!-- 12 增强型LLM -->
-  <section class="slide slide-content" data-index="12" data-title="增强型LLM">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>从"增强型 LLM"到 Agent</h2><p style="margin-top:0.2rem">它是怎么"长"出来的</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">起</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">Anthropic：从最简方案开始，必要时才加自主——很多任务用增强型 LLM 已经够用，复杂任务再进入完整 Agent。</p></div>
+<section class="slide slide-content" data-index="12" data-title="AI执行律师判断">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>01 · 小结</h2><p style="margin-top:0.2rem">边界里的执行，责任里的判断</p></div><div class="label red" style="margin-left:auto">01 · 法律为什么是 AI 天选之地</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">01</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 做执行，律师做判断。</p></div>
     <div class="content-main">
-      <div class="reveal" style="--i:2; font-family:var(--f-mono); font-size:clamp(0.78rem,1.1vw,0.95rem)">模型 ＋ 检索 ＋ 工具 ＋ 记忆 ＝ <span style="color:var(--accent)">增强型 LLM</span></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">W</span><div class="item-text"><h3>Workflow</h3><p>预先写好的固定路径——可预测。</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">A</span><div class="item-text"><h3>Agent</h3><p>模型自己决定下一步——灵活。</p></div></div>
-      <div class="n">12</div>
+      <p class="bio-line reveal" style="--i:2;font-size:clamp(1.5rem,2.4vw,2.2rem);line-height:1.65">让 AI 在律师设定的边界里做执行，判断、责任和信任仍然留在专业服务之中。</p>
     </div>
   </section>
-  <!-- 13 执行循环 -->
-  <section class="slide slide-content" data-index="13" data-title="执行循环">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>Agent 的运行循环</h2><p style="margin-top:0.2rem">在循环中推进任务</p></div><div class="label red" style="margin-left:auto">01 · 从问答到同事</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">↻</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">OpenAI《构建 Agent 实用指南》。</p></div>
+
+<section class="slide slide-part" data-index="13" data-title="Agent办公">
+    <div class="part-header"><div class="label red">Part 02</div><div class="label">Agent 办公</div></div>
+    <div class="part-body"><div class="part-no">02</div><h2>Agent 办公</h2><p>对话框、通用 Agent、办公执行 Agent、IDE 工作台、法律垂直 Agent。</p></div>
+  </section>
+
+<section class="slide slide-content" data-index="14" data-title="对话框边界">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>对话框的三个天花板</h2><p style="margin-top:0.2rem">进入 Agent 办公前，先看单次问答的边界</p></div><div class="label red" style="margin-left:auto">02 · Agent 办公</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">法律工作流与单次问答之间，差在结构。</p></div>
     <div class="content-main">
-      <div class="cycle-diagram reveal" style="--i:2">
-        <div class="cycle-node"><span>01</span><strong>评估</strong><p>当前知道什么</p></div>
-        <div class="cycle-node"><span>02</span><strong>决策</strong><p>需要上下文还是行动</p></div>
-        <div class="cycle-node"><span>03</span><strong>调用</strong><p>搜索、文件、数据库、工具</p></div>
-        <div class="cycle-node"><span>04</span><strong>比对</strong><p>结果是否接近目标</p></div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>文件孤岛</h3><p>案件材料往往是一整个文件夹，对话框只能看到被粘贴进去的片段，人工持续搬运。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>流程断点</h3><p>一问一答缺少持续工作记忆。回答之后，仍需复制、改格式、建表、存档、转发。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>经验归零</h3><p>格式、边界、口吻留在单次对话中，工作方法仍停留在局部。</p></div></div>
+    </div>
+  </section>
+
+<section class="slide slide-content" data-index="15" data-title="通用任务Agent">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>通用任务 Agent</h2><p style="margin-top:0.2rem">规划任务、调用工具、整理资料、形成交付物</p></div><div class="label red" style="margin-left:auto">02 · Agent 办公</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">A</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">围绕一个目标，自主拆解步骤、调用工具、根据反馈调整，并形成交付物。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">MiniMax</span><div class="item-text"><h3>MiniMax Agent</h3><p>通用型 Agent 产品，整合联网浏览、文件处理和多步骤任务执行。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">Kimi</span><div class="item-text"><h3>Kimi Agent</h3><p>基于 Kimi 的 Agent 能力，强调长上下文理解、任务规划和工具调用。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">Coze</span><div class="item-text"><h3>扣子空间</h3><p>字节跳动旗下 Agent 创建与应用搭建平台，可组合知识库、工作流和插件。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">Manus</span><div class="item-text"><h3>Manus</h3><p>通用型自主 Agent 产品，强调任务规划、工具调用和交付物生成。</p></div></div>
+      <div class="item-row reveal" style="--i:6"><span class="item-index">GLM</span><div class="item-text"><h3>智谱 AutoGLM</h3><p>智谱提供的 Agent 能力，面向网页、应用和连续操作任务。</p></div></div>
+    </div>
+  </section>
+
+<section class="slide slide-content" data-index="16" data-title="办公现场Agent">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>办公执行 Agent</h2><p style="margin-top:0.2rem">从聊天窗口进入办公现场</p></div><div class="label red" style="margin-left:auto">02 · Agent 办公</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">执</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 开始和文档、表格、日程、审批、任务一起工作。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">腾讯</span><div class="item-text"><h3>腾讯 WorkBuddy</h3><p>企业级智能工作台，把 AI 接入日常协作、知识检索和流程推进。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">阿里</span><div class="item-text"><h3>QoderWork</h3><p>桌面端 AI 助手，将 Qoder 的 Agent 能力从编程扩展到日常工作；用户只需描述目标，它会自主规划、执行并交付文件整理、数据处理、文档生成等任务。</p></div></div>
+    </div>
+  </section>
+
+<section class="slide slide-content" data-index="17" data-title="IDE工作台">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>IDE / 工作台</h2><p style="margin-top:0.2rem">把文件夹、编辑器、终端、AI 工具放进同一个工作现场</p></div><div class="label red" style="margin-left:auto">02 · Agent 办公</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">IDE</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">IDE 的价值在于集成工作现场。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">Cursor</span><div class="item-text"><h3>Cursor</h3><p>面向代码与文本项目的 AI IDE，可在文件夹、编辑器和 AI 对话之间协同工作。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">Trae</span><div class="item-text"><h3>Trae</h3><p>字节跳动旗下 AI IDE，提供对话、代码生成、项目理解和 Agentic 开发能力。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">@文件</span><div class="item-text"><h3>把文件和 AI 放在同一个房间</h3><p>打开文件夹、引用文件、生成新文件，让 AI 在材料现场推进任务。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">终端</span><div class="item-text"><h3>终端与工具</h3><p>命令行、脚本、格式转换和版本管理，进入可重复、可追踪的工作流。</p></div></div>
+    </div>
+  </section>
+
+<section class="slide slide-content legal-agent-slide" data-index="18" data-title="法律垂直Agent">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>法律垂直 Agent</h2><p style="margin-top:0.2rem">专业数据 + 专业流程 + 任务推进能力</p></div><div class="label red" style="margin-left:auto">02 · Agent 办公</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">法</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">法源、引用、流程和交付链路，是法律垂直 Agent 的基础。</p></div>
+    <div class="content-main">
+      <div class="legal-agent-grid">
+        <div class="legal-agent-card reveal" style="--i:2"><div class="tag">法宝</div><h3>北大法宝智能体</h3><p>以法规、案例、期刊、专题等法律数据库为底座，服务法条与类案检索场景。</p></div>
+        <div class="legal-agent-card reveal" style="--i:3"><div class="tag">元典</div><h3>华宇元典</h3><p>提供法律检索、类案分析和裁判规则整理等法律数据服务。</p></div>
+        <div class="legal-agent-card reveal" style="--i:4"><div class="tag">Alpha</div><h3>iCourt AlphaGPT</h3><p>面向律师办案、知识管理和法律写作的 AI 工作入口。</p></div>
+        <div class="legal-agent-card reveal" style="--i:5"><div class="tag">秘塔</div><h3>秘塔法律</h3><p>提供法律检索、法规案例问答和文书辅助能力。</p></div>
+        <div class="legal-agent-card reveal" style="--i:6"><div class="tag">慧多宝</div><h3>慧多宝</h3><p>法律垂类 Agent 平台，结合知识库和工作流完成法律任务。</p></div>
+        <div class="legal-agent-card reveal" style="--i:7"><div class="tag">智合</div><h3>智合</h3><p>法律专业内容与行业知识服务平台，持续接入 AI 能力。</p></div>
       </div>
-      <div class="reveal" style="--i:3; font-family:var(--f-mono); font-size:clamp(1rem,1.35vw,1.2rem); color:var(--accent)">反思 · 调用工具 · 规划 · 多智能体协作</div>
-      <p class="reveal" style="--i:4; max-width:820px">多轮往复，直到完成。Agent 的重点，是把“想、做、看反馈、再调整”放进同一个任务循环。</p>
-      <div class="n">13</div>
     </div>
   </section>
 
-  <!-- 14 AI执行律师判断 -->
-  <section class="slide" data-index="14" data-title="AI执行律师判断" style="display:flex; flex-direction:column">
-    <div class="take-header"><span class="rule-accent"></span><div class="label">01 · 小结</div><div class="label red" style="margin-left:auto">Human in the loop</div></div>
-    <div class="take-body"><div>
-      <div class="take-quote reveal" style="--i:0">AI 做<em>执行</em>，<br>律师做<em>判断</em>。</div>
-      <p class="reveal" style="--i:1; margin-top:1.5rem; max-width:600px">让它在我们设定的边界里做执行。OpenAI 也强调：护栏（guardrails）是分层防御——输入过滤、工具使用、人工介入，每一层都要。</p>
-    </div></div>
-    <div class="n">14</div>
-  </section>
-
-  <!-- Part 2 -->
-  <section class="slide slide-part" data-index="15" data-title="第二部分">
-    <div class="part-header"><div class="label red">Part 02</div><div class="label">Agent 能力版图</div></div>
-    <div class="part-body">
-      <div class="part-num">02</div>
-      <div class="part-title-block">
-        <span class="rule-accent" style="margin-bottom:1.2rem; display:block"></span>
-        <h2 class="reveal" style="--i:0">Agent<br><span style="color:var(--accent)">能力版图</span></h2>
-        <div class="part-progress reveal" style="--i:1; margin-top:1.5rem"><div class="prog-seg done"></div><div class="prog-seg active"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
-        <p class="reveal" style="--i:2; margin-top:0.8rem">不背分类，看坐标——判断"这活交给哪种能力"</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 16 能力坐标 -->
-  <section class="slide slide-content" data-index="16" data-title="能力坐标">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>能力坐标</h2><p style="margin-top:0.2rem">产品会迭代，坐标更稳定</p></div><div class="label red" style="margin-left:auto">02 · 能力版图</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">四个坐标，能用很久。</p></div>
-    <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>执行环境</h3><p>在哪里干活？</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>工具权限</h3><p>能动什么？</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>交付形态</h3><p>最后交付什么？</p></div></div>
-      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>专业化程度</h3><p>懂什么领域？</p></div></div>
-    </div>
-  </section>
-
-  <!-- 17 通用任务Agent -->
-  <section class="slide slide-content" data-index="17" data-title="通用任务Agent">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>通用任务 Agent</h2><p style="margin-top:0.2rem">规划 → 调用 → 反馈 → 交付</p></div><div class="label red" style="margin-left:auto">02 · 能力版图</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">①</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">从一个宽目标出发，先查、想、写、生成初稿。</p></div>
+<section class="slide slide-content" data-index="20" data-title="国内法律AI产品">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>带 AI 的法律产品</h2><p style="margin-top:0.2rem">按入口看它解决哪一段工作</p></div><div class="label red" style="margin-left:auto">02 · Agent 办公</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">产</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">合同、检索、问答、知识服务。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">国内</span><div class="item-text"><h3>代表</h3><p>MiniMax Agent · Kimi Agent · 扣子空间 · Manus · 智谱 AutoGLM</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">律师</span><div class="item-text"><h3>用它做</h3><p>行业背景调研 · 公开资料整理 · 新规初步研究 · 报告/培训初稿</p></div></div>
-      <div class="n">17</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">检索</span><div class="item-text"><h3>威科先行</h3><p>法律信息、法规案例、实务专题和专业内容数据库。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">合同</span><div class="item-text"><h3>法天使</h3><p>合同模板、合同审查、合同管理和交易文件自动化。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">合同</span><div class="item-text"><h3>玛卡合同</h3><p>合同审查、智能起草、风险提示与合同知识库类工具。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">检索</span><div class="item-text"><h3>秘塔法律</h3><p>法律检索、法规案例问答和文书辅助入口。</p></div></div>
     </div>
   </section>
 
-  <!-- 18 办公执行Agent -->
-  <section class="slide slide-content" data-index="18" data-title="办公执行Agent">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>进入"办公现场"的 Agent</h2><p style="margin-top:0.2rem">本地文件 · 工作台 · 权限</p></div><div class="label red" style="margin-left:auto">02 · 能力版图</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">②</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">最贴近律师日常：材料台账、证据目录、客户汇报。</p></div>
-    <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">国内</span><div class="item-text"><h3>代表</h3><p>腾讯 <strong style="color:var(--accent)">WorkBuddy</strong>（国内办公类 AI Agent 用户量领先）· 阿里 <strong style="color:var(--accent)">Qoder / QoderWork</strong> · 百度 Operator</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">关键</span><div class="item-text"><h3>权限边界最重要</h3><p>它能读本地材料、写文件、调连接器——能预览、能回滚、能确认。</p></div></div>
-      <div class="n">18</div>
-    </div>
-  </section>
-
-  <!-- 19 Coding Agent -->
-  <section class="slide slide-content" data-index="19" data-title="CodingAgent">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>Coding Agent</h2><p style="margin-top:0.2rem">Agent 交付最成熟的样板</p></div><div class="label red" style="margin-left:auto">02 · 能力版图</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">③</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">掌握基本结构，就能借鉴它的工作方式。</p></div>
-    <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">国内</span><div class="item-text"><h3>代表</h3><p>阿里 Qoder · 腾讯 CodeBuddy · 字节 Trae</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">借鉴</span><div class="item-text"><h3>"文件—反馈—验收"</h3><p>代码工作天然有文件、有反馈、有验收——法律工作也可以被设计成这样的任务现场。</p></div></div>
-      <div class="n">19</div>
-    </div>
-  </section>
-
-  <!-- 20 法律垂直 -->
-  <section class="slide slide-content" data-index="20" data-title="法律垂直">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>法律垂直 AI / Agent</h2><p style="margin-top:0.2rem">核心是专业数据 + 专业流程</p></div><div class="label red" style="margin-left:auto">02 · 能力版图</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">④</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">重点看来源、引用准确、可追溯。</p></div>
-    <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">国内</span><div class="item-text"><h3>代表</h3><p>通义法睿 · 北大法宝智能体 · 华宇元典 · iCourt AlphaGPT · 秘塔法律 · 慧多宝 · 智合</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">重点</span><div class="item-text"><h3>使用要点</h3><p>法源来源 · 引用准确 · 类案关联 · 回到原文复核——重点看它是否具备 Agent 的任务推进能力。</p></div></div>
-      <div class="n">20</div>
-    </div>
-  </section>  <!-- 21 国内法律 AI 产品地图 -->
-  <section class="slide slide-content" data-index="21" data-title="国内法律AI产品">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>国内法律 AI 产品，按入口看</h2><p style="margin-top:0.2rem">别只看名字，看它解决哪一段工作</p></div><div class="label red" style="margin-left:auto">02 · 能力版图</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">产</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">这页只做市场地图；采购仍看数据来源、权限、复核和落地流程。</p></div>
-    <div class="content-main">
-      <div class="product-grid">
-        <div class="product-card reveal" style="--i:2"><div class="tag">01 · 合同模板 / 审查 / 签管</div><h3>把合同工作产品化</h3><p>法天使 · 玛卡合同 · 法大大 · e签宝 · 契约锁</p></div>
-        <div class="product-card reveal" style="--i:3"><div class="tag">02 · 法规案例 / 数据库问答</div><h3>让法律信息进入对话</h3><p>北大法宝 · 华宇元典 · 威科先行 · 无讼案例</p></div>
-        <div class="product-card reveal" style="--i:4"><div class="tag">03 · 法律问答 / 文书生成</div><h3>把通用模型接上专业语料</h3><p>秘塔法律 · 通义法睿 · iCourt AlphaGPT</p></div>
-        <div class="product-card reveal" style="--i:5"><div class="tag">04 · 办案协作 / 团队工作流</div><h3>把任务推进放进系统</h3><p>慧多宝 · 智合 · 律所知识库 / 案件管理系统</p></div>
-      </div>
-      <div class="n">21</div>
-    </div>
-  </section>
-  <!-- Part 3 -->
-  <section class="slide slide-part" data-index="22" data-title="第三部分">
+<section class="slide slide-part" data-index="21" data-title="高效协作公式">
     <div class="part-header"><div class="label red">Part 03</div><div class="label">高效协作公式</div></div>
     <div class="part-body">
       <div class="part-num">03</div>
@@ -857,37 +950,33 @@ h3{
           <div class="formula-card"><div class="op">校验</div><h3>输出可追溯</h3><p>事实、依据、推理逐层复核。</p></div>
           <div class="formula-card"><div class="op">沉淀</div><h3>经验变系统</h3><p>模板、清单、知识库、Skill。</p></div>
         </div>
-        <div class="part-progress reveal" style="--i:2; margin-top:1.2rem"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg active"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
+        <div class="part-progress reveal" style="--i:2; margin-top:1.2rem"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- 24 Agent First -->
-  <section class="slide slide-content" data-index="23" data-title="AgentFirst">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>Agent First：判断先进入系统</h2><p style="margin-top:0.2rem">公式的"操作版"——四个问题</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 进任务前，先把"怎么协作"想清楚。</p></div>
-    <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">①</span><div class="item-text"><h3>拆解</h3><p>它要看清什么、做哪几步</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">②</span><div class="item-text"><h3>约束</h3><p>人和它怎么分工、边界在哪</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">③</span><div class="item-text"><h3>校验</h3><p>结果怎么验收</p></div></div>
-      <div class="item-row reveal" style="--i:5"><span class="item-index">④</span><div class="item-text"><h3>沉淀</h3><p>这次的经验怎么留下</p></div></div>
-    </div>
-  </section>
-
-  <!-- 25 材料原生化 -->
-  <section class="slide slide-content" data-index="24" data-title="材料原生化">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>拆解 · 材料原生化</h2><p style="margin-top:0.2rem">让 AI 知道"字"起什么作用</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">①</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">这就是 Anthropic 说的"上下文工程"。</p></div>
+<section class="slide slide-content" data-index="22" data-title="AgentFirst">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>Agent First：先设计工作流</h2><p style="margin-top:0.2rem">AI 进任务前，先把任务、材料、步骤、产物、边界讲清楚</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">×</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">拆解 × 约束 × 校验 × 沉淀。</p></div>
     <div class="content-main">
-      <p class="reveal" style="--i:2">OCR 成文字，只是让它"看到字"。它还要知道每份材料的角色：</p>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">A</span><div class="item-text"><h3>材料类型 · 提供主体 · 形成时间 · 版本状态</h3></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">B</span><div class="item-text"><h3>能证明什么 · 对应哪个争点 · 风险点在哪里</h3><p>付款凭证只证明"付了款"，还是连"合同履行"也能证明？</p></div></div>
-      <div class="n">24</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">拆解</span><div class="item-text"><h3>它要看清什么、做哪几步</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">约束</span><div class="item-text"><h3>人和它如何分工，边界写在哪里</h3></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">校验</span><div class="item-text"><h3>事实、依据、推理如何验收</h3></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">沉淀</span><div class="item-text"><h3>这次经验如何进入下一次默认工作法</h3></div></div>
     </div>
   </section>
 
-  <!-- 26 派工 -->
-  <section class="slide slide-content" data-index="25" data-title="派工">
+<section class="slide slide-content" data-index="23" data-title="材料原生化">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>拆解 · 材料原生化</h2><p style="margin-top:0.2rem">上下文工程</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">材</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">OCR 成为 AI 友好的 Markdown。</p></div>
+    <div class="content-main">
+      <p class="bio-line">在模型眼中，客观证据、当事人的一面之词、OCR 瑕疵，可能被降维成连续文本。材料原生化要解决的，是每份材料在诉讼中的身份。</p>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">基础</span><div class="item-text"><h3>基础身份</h3><p>材料类型、提供主体、形成时间、版本状态。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">诉讼</span><div class="item-text"><h3>诉讼身份</h3><p>证明对象、关联争点、风险点、待确认事项。</p></div></div>
+    </div>
+  </section>
+
+<section class="slide slide-content" data-index="24" data-title="派工">
     <div class="content-label"><span class="rule-accent"></span><div><h2>拆解 · 派工公式</h2><p style="margin-top:0.2rem">任务 ＝ 目标＋材料＋步骤＋产物＋边界</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">②</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">把原本交代助理的方式，写成 AI 可以执行的工作标准。</p></div>
     <div class="content-main" style="display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; align-content:center">
@@ -899,176 +988,138 @@ h3{
     </div>
   </section>
 
-  <!-- 27 坏好任务 -->
-  <section class="slide slide-content" data-index="26" data-title="坏好任务">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>拆解 · 同一个需求，差别有多大</h2><p style="margin-top:0.2rem">把"分析"换成交付物</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">↔</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 立刻从"聊天"切到"交作业"。</p></div>
+<section class="slide slide-content" data-index="25" data-title="坏好任务">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>拆解 · 同一个需求，差别有多大</h2><p style="margin-top:0.2rem">把“分析”换成交付物</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">↔</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 从聊天切到交作业。</p></div>
     <div class="content-main">
-      <div class="reveal" style="--i:2; border:2px solid rgba(0,0,0,0.2); padding:0.8rem 1rem; font-family:var(--f-mono); font-size:0.78rem; color:var(--mid)">✕　帮我把这些材料整理一下。</div>
-      <div class="reveal" style="--i:3; border:2px solid var(--ink); padding:0.8rem 1rem; font-family:var(--f-mono); font-size:0.74rem; line-height:1.6">✓　读取材料包。本轮只做整理，不下法律结论。<br>　 输出表格：文件名｜日期｜类型｜涉及主体｜关键信息｜关联争点｜待复核问题。<br>　 无法确认的写"待确认"，不要自行补全。不要删除、移动、改名原文件。</div>
-      <div class="n">26</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">弱</span><div class="item-text"><h3>帮我把这些材料整理一下。</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">强</span><div class="item-text"><h3>读取材料包。本轮聚焦整理，法律结论另行处理。</h3><p>输出表格：文件名｜日期｜类型｜涉及主体｜关键信息｜关联争点｜待复核问题。待确认事项写“待确认”，保留原文件。</p></div></div>
     </div>
   </section>
 
-  <!-- 28 知识分类 -->
-  <section class="slide slide-content" data-index="27" data-title="知识分类">
+<section class="slide slide-content" data-index="26" data-title="知识分类">
     <div class="content-label"><span class="rule-accent"></span><div><h2>拆解 · 要"喂"的是程序性知识</h2><p style="margin-top:0.2rem">再往下抽一层</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">2</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">波兰尼："我们知道的，比能说出来的多。"</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">已知</span><div class="item-text"><h3>陈述性 · "知道是什么"</h3><p>法条、案例。模型/数据库已有，无需重复说明。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index" style="color:var(--accent)">要教</span><div class="item-text"><h3 style="color:var(--accent)">程序性 · "知道怎么做"</h3><p>拿到材料先做什么、长合同先看哪些条款。越自然的动作，越容易忘了教 AI。</p></div></div>
-      <div class="n">27</div>
+      <div class="n">26</div>
     </div>
   </section>
 
-  <!-- 29 约束填空题 -->
-  <section class="slide slide-content" data-index="28" data-title="约束填空题">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>约束 · 把作文题变填空题</h2><p style="margin-top:0.2rem">给它边界 + 格式</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">框</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">一句话：把"交付物"写清楚。</p></div>
+<section class="slide slide-content" data-index="27" data-title="约束填空题">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>约束 · 把作文题变填空题</h2><p style="margin-top:0.2rem">给边界，也给格式</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">框</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">把交付物写清楚。</p></div>
     <div class="content-main">
-      <div class="reveal" style="--i:2; border:2px solid var(--ink); padding:0.9rem 1.1rem; font-family:var(--f-mono); font-size:0.76rem; line-height:1.7">仅基于我给的材料，不补充不存在的事实；材料不足就写"材料不足"。<br>输出三列表：争议焦点｜依据(法条/案例)｜我方风险与下一步。<br>读者是主办律师，语气克制可核验。用 Markdown。</div>
-      <div class="n">28</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">材料</span><div class="item-text"><h3>仅基于已给材料，不补充材料外事实；材料不足就写“材料不足”。</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">格式</span><div class="item-text"><h3>输出三列表</h3><p>争议焦点｜依据（法条/案例）｜我方风险与下一步。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">读者</span><div class="item-text"><h3>读者是主办律师</h3><p>语气克制可核验。用 Markdown。</p></div></div>
     </div>
   </section>
 
-  <!-- 30 窄桥开阔地 -->
-  <section class="slide slide-content" data-index="29" data-title="窄桥开阔地">
+<section class="slide slide-content" data-index="28" data-title="窄桥开阔地">
     <div class="content-label"><span class="rule-accent"></span><div><h2>约束 · 窄桥 vs 开阔地</h2><p style="margin-top:0.2rem">看地形分配控制权</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">尺</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">约束的关键，是按地形分配控制权。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">窄桥</span><div class="item-text"><h3>低自由度</h3><p>走错一步就报错（立案材料、算金额）。→ 给固定步骤/脚本。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">开阔</span><div class="item-text"><h3>高自由度</h3><p>方向对了就是旷野（综合研究、类案分析）。→ 只给框架和判断标准，留白。</p></div></div>
-      <div class="n">29</div>
+      <div class="n">28</div>
     </div>
   </section>
 
-  <!-- 31 风险分档 -->
-  <section class="slide slide-content" data-index="30" data-title="风险分档">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>约束 · 按"风险与可逆性"分三档</h2><p style="margin-top:0.2rem">法律场景怎么设档</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">底线：未脱敏材料不进公开模型，对外文书最终回到律师签字。</p></div>
+<section class="slide slide-content" data-index="29" data-title="运行中监督">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>校验 · 运行中监督</h2><p style="margin-top:0.2rem">可见、可停、可回溯</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">核</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">监督的重点，是在清晰边界内让工作持续推进。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">低</span><div class="item-text"><h3>低风险 · 可逆</h3><p>材料台账、时间线、版本比对 → 可高自主</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">中</span><div class="item-text"><h3>中风险</h3><p>争点归纳、请求权基础、类案筛选 → 设确认点</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index" style="color:var(--accent)">高</span><div class="item-text"><h3 style="color:var(--accent)">高风险 · 不可逆</h3><p>对外提交、发函、算重大金额、下结论 → 人来定</p></div></div>
-      <div class="n">30</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>边界先写清</h3><p>材料范围、输出格式、禁止事项、引用要求。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>过程要看见</h3><p>它在读什么、查什么、生成什么，过程可追踪。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>节点要确认</h3><p>方向选择、事实认定、法律适用、对外交付回到律师。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>记录要留下</h3><p>输入、工具调用、修改痕迹和最终版本可复盘。</p></div></div>
     </div>
   </section>
 
-  <!-- 32 运行中监督 -->
-  <section class="slide slide-content" data-index="31" data-title="运行中监督">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>校验 · 就是"运行中监督"</h2><p style="margin-top:0.2rem">怎么验收</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">③</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 主动停下请求确认，是监督机制的一部分。</p></div>
+<section class="slide slide-content" data-index="30" data-title="幻觉校验">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>校验 · 幻觉最麻烦的地方</h2><p style="margin-top:0.2rem">真实材料被错误引用、错误概括、错误适用</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">幻</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">案号和案例可能是真的，适用情形、法院观点和事实却被改写。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">新手</span><div class="item-text"><h3>前置审批</h3><p>每一步都要它先问我——很快变负担。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">老手</span><div class="item-text"><h3>边跑边盯</h3><p>先让它跑，但明确边界、实时可见、关键节点确认、随时可中断、留全程记录。</p></div></div>
-      <div class="n">31</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>颠倒引用判决内容</h3><p>AI 写成“第六巡回法院在 Washington 案中撤销了角色提升”。判决原文实际维持了角色提升。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>虚构引用案件事实</h3><p>AI 写成“Anthony 案中无证据显示被告指挥他人”。案卷显示，被告明确承认了自己担任领导角色。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>编造评注内容</h3><p>AI 引用量刑指南评注，称其中写明“单纯在场或知情不足”。法院查阅评注原文，未找到相同或实质相似内容。</p></div></div>
     </div>
   </section>
 
-  <!-- 33 三重校验 -->
-  <section class="slide slide-content" data-index="32" data-title="三重校验">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>校验 · 三重校验 + 四类"假"</h2><p style="margin-top:0.2rem">逐句标注来源，查不到就说查不到</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">不靠"看起来不错"。</p></div>
+<section class="slide slide-content stanford-slide" data-index="31" data-title="斯坦福">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>为什么校验是底线</h2><p style="margin-top:0.2rem">专业法律 AI 仍会出现幻觉</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">STUDY</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">斯坦福实证中的专业法律 AI 幻觉率。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">验</span><div class="item-text"><h3>三重校验</h3><p>事实：材料里真有吗 · 依据：法条/案例真实准确吗 · 推理：从事实到结论站得住吗</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index" style="color:var(--accent)">假</span><div class="item-text"><h3 style="color:var(--accent)">四类高危"假"</h3><p>编造法条 · 真来源假内容 · 案例命题颠倒 · 不适用也说得斩钉截铁</p></div></div>
-      <div class="n">32</div>
+      <div class="stanford-stat-wrap">
+        <div class="stanford-stat-block reveal" style="--i:2">
+          <div class="stanford-stat-label">专业法律 AI 幻觉率</div>
+          <div class="stanford-number">17–33%</div>
+          <p>带检索能力的专业法律 AI，仍可能给出错误法律回答。</p>
+        </div>
+        <div class="stanford-bottomline reveal" style="--i:3">
+          <div class="label">BOTTOM LINE</div>
+          <h3>校验，是法律 AI 协作的底线环节。</h3>
+          <p>事实、依据与引用，都必须能够回到原始材料逐项核验。</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 34 斯坦福 -->
-  <section class="slide" data-index="33" data-title="斯坦福" style="display:flex; flex-direction:column">
-    <div class="take-header"><span class="rule-accent"></span><div class="label">03 · 为什么校验是底线</div></div>
-    <div class="take-body"><div>
-      <div class="reveal" style="--i:0; font-family:var(--f-display); font-size:clamp(5rem,16vw,13rem); line-height:0.9; color:var(--accent)">17–33%</div>
-      <p class="reveal" style="--i:1; margin-top:1rem; max-width:640px; font-size:clamp(0.9rem,1.4vw,1.1rem)">斯坦福实证：连带检索的专业法律 AI（Westlaw、Lexis），幻觉率仍有这么高。通用模型回答具体法律问题，更高达 69%–88%。校验，对律师是一道底线。</p>
-    </div></div>
-    <div class="n">33</div>
-  </section>
-
-  <!-- 35 沉淀 -->
-  <section class="slide slide-content" data-index="34" data-title="沉淀">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>沉淀 · 改的是"产线"</h2><p style="margin-top:0.2rem">让这次不白做</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">④</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">沉淀下来的是一套越来越贴合业务的工作方法，而非几个 Prompt。</p></div>
+<section class="slide slide-content" data-index="32" data-title="沉淀">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>沉淀 · 改的是“产线”</h2><p style="margin-top:0.2rem">让这次经验进入下一次默认工作法</p></div><div class="label red" style="margin-left:auto">03 · 协作公式</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">产</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">沉淀下来的是一套越来越贴合业务的工作方法。</p></div>
     <div class="content-main">
-      <p class="reveal" style="--i:2">这次发现 AI 把"客户陈述"写成"已证事实"→ 下次规则要求区分；这次某类条款漏看 → 下次审查清单加一项。</p>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">→</span><div class="item-text"><h3 style="color:var(--accent)">先看 Skill 与 MCP，再补 CLI 这个本地入口</h3><p>方法、外部数据、本地工具，分别进入 AI 工作流。</p></div></div>
-      <div class="n">34</div>
+      <p class="bio-line">所谓产线，就是给 AI 提供的 Skill 和工作流。改动目标是这条产线稳定产出的平均分。</p>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">例</span><div class="item-text"><h3>客户陈述被写成“已证事实”</h3><p>下次规则要求区分客观材料、当事人主张、律师分析。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">例</span><div class="item-text"><h3>某类条款反复漏看</h3><p>下次审查清单增加固定检查项。</p></div></div>
     </div>
   </section>
 
-  <!-- Part 4 -->
-  <section class="slide slide-part" data-index="35" data-title="第四部分">
+<section class="slide slide-part" data-index="33" data-title="Skill MCP CLI">
     <div class="part-header"><div class="label red">Part 04</div><div class="label">Skill · MCP · CLI</div></div>
     <div class="part-body">
       <div class="part-num">04</div>
       <div class="part-title-block">
         <span class="rule-accent" style="margin-bottom:1.2rem; display:block"></span>
-        <h2 class="reveal" style="--i:0">三个关键入口<br><span style="color:var(--accent)">Skill · MCP · CLI</span></h2><div class="part-progress reveal" style="--i:1; margin-top:1.5rem"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg active"></div><div class="prog-seg"></div></div>
+        <h2 class="reveal" style="--i:0">三个关键入口<br><span style="color:var(--accent)">Skill · MCP · CLI</span></h2><div class="part-progress reveal" style="--i:1; margin-top:1.5rem"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
       </div>
     </div>
   </section>
-  <!-- Part 4 concept map -->
-    <section class="slide slide-content" data-index="36" data-title="两个核心概念">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>两个核心概念：Skill / MCP</h2><p style="margin-top:0.2rem">一个管方法，一个管连接</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">2</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">先把 Skill 与 MCP 的边界放清楚；CLI 放到后面单独讲。</p></div>
+
+<section class="slide slide-content" data-index="34" data-title="Skill是什么">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>Skill 到底是什么？</h2><p style="margin-top:0.2rem">固定的、针对特定任务的大型提示词</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">S</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">高频、标准化任务，省去每次重复说明“怎么做”。</p></div>
     <div class="content-main">
-      <div class="concept-map two">
-        <div class="concept-card reveal" style="--i:2"><div class="tag">Skill</div><h3>工作方法 / SOP</h3><p>管“怎么做”：把稳定工作方法写给 AI。</p></div>
-        <div class="concept-card reveal" style="--i:3"><div class="tag">MCP</div><h3>外部系统连接协议</h3><p>管“接触什么”：让 AI 接触法条库、文件、表格、企业数据等外部资源。</p></div>
-      </div>
-      <div class="n">35</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">公式</span><div class="item-text"><h3>Skill = 结构化提示词 + 工作流描述 + 封装</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">技术</span><div class="item-text"><h3>技术角度</h3><p>把任务说明、操作步骤、参考资料和工具调用组织成可复用结构。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">使用</span><div class="item-text"><h3>使用者角度</h3><p>给 AI 写的一份特定任务“操作手册”。正是因为会“操作”，才有了“技能”。</p></div></div>
     </div>
   </section>
 
-  <!-- 37 Skill是什么 -->
-  <section class="slide slide-content" data-index="37" data-title="Skill是什么">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>Skill · 可复用工作手册</h2><p style="margin-top:0.2rem">写给 AI 同事的</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">S</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">遇到这类任务，按什么步骤、看什么材料、输出什么、哪里提醒人复核。</p></div>
-    <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">Prompt</span><div class="item-text"><h3>这一次怎么说</h3></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index" style="color:var(--accent)">Skill</span><div class="item-text"><h3 style="color:var(--accent)">以后每次怎么做</h3></div></div>
-      <div class="n">36</div>
-    </div>
-  </section>
-
-  <!-- 38 三层加载 -->
-  <section class="slide slide-content" data-index="38" data-title="三层加载">
+<section class="slide slide-content" data-index="35" data-title="三层加载">
     <div class="content-label"><span class="rule-accent"></span><div><h2>核心结构 · 三层"按需加载"</h2><p style="margin-top:0.2rem">官方定义</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">一个文件夹，核心是带 frontmatter 的 SKILL.md。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">L1</span><div class="item-text"><h3>启动时</h3><p>只读 name + description（元数据）——决定什么时候出场。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">L2</span><div class="item-text"><h3>触发后</h3><p>读完整正文——决定这次怎么干活。</p></div></div>
       <div class="item-row reveal" style="--i:4"><span class="item-index">L3</span><div class="item-text"><h3>按需</h3><p>加载 scripts / references / 模板——决定用什么工具和资料。</p></div></div>
-      <div class="n">37</div>
+      <div class="n">35</div>
     </div>
   </section>
 
-  <!-- 39 类型自由度 -->
-  <section class="slide slide-content" data-index="39" data-title="Skill类型">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>三种类型 ＝ 三种自由度</h2><p style="margin-top:0.2rem">给 AI 多少自由度</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">窄桥 → 带脚本压低；开阔地 → 给文本框架留空间。</p></div>
-    <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">高</span><div class="item-text"><h3>纯文本型</h3><p>只有指令文字——框架、分析方法、写作风格。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">中</span><div class="item-text"><h3>带 references</h3><p>主文件 + 子文档——复杂、多步骤流程。</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">低</span><div class="item-text"><h3>带 scripts</h3><p>调用可执行脚本——期间计算、格式转换，最确定。</p></div></div>
-      <div class="n">38</div>
-    </div>
-  </section>
-
-  <!-- 40 渐进式披露 -->
-  <section class="slide slide-content" data-index="40" data-title="渐进式披露">
+<section class="slide slide-content" data-index="36" data-title="渐进式披露">
     <div class="content-label"><span class="rule-accent"></span><div><h2>渐进式披露 · 拆成一棵树</h2><p style="margin-top:0.2rem">复杂 Skill 怎么组织</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">树</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">三层加载 + 这棵树 = 上下文始终聚焦。</p></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">树</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">主文件负责导航，细节按需读取。</p></div>
     <div class="content-main">
-      <div class="reveal" style="--i:2; border:2px solid var(--ink); padding:0.8rem 1rem; font-family:var(--f-mono); font-size:0.74rem; line-height:1.6">skill-name/<br>├── SKILL.md　← 主文档（必须）<br>├── scripts/　← 可执行脚本<br>├── references/← 参考文档（按需）<br>└── assets/　← 模板、资源</div>
-      <p class="reveal" style="--i:3">主文件只写：触发条件、概述、工作流骨架、子文件导航——它是一份"导航"。官方建议 ≤ 500 行；引用用相对路径、单层。</p>
-      <div class="n">39</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">root</span><div class="item-text"><h3>skill-name/</h3><p>SKILL.md · scripts/ · references/ · assets/</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">主文档</span><div class="item-text"><h3>SKILL.md</h3><p>触发条件、工作流骨架、子文件导航。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">按需</span><div class="item-text"><h3>references / scripts / assets</h3><p>材料越多，越需要让上下文始终聚焦。</p></div></div>
     </div>
   </section>
 
-  <!-- 41 四条件 -->
-  <section class="slide slide-content" data-index="41" data-title="什么值得做Skill">
+<section class="slide slide-content" data-index="37" data-title="什么值得做Skill">
     <div class="content-label"><span class="rule-accent"></span><div><h2>什么任务值得"蒸馏"成 Skill</h2><p style="margin-top:0.2rem">判断原则</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">一次性、偶发、不确定的，用普通对话就够了。</p></div>
     <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
@@ -1079,34 +1130,41 @@ h3{
     </div>
   </section>
 
-  <!-- 42 蒸馏什么 -->
-  <section class="slide slide-content" data-index="42" data-title="蒸馏什么">
+<section class="slide slide-content" data-index="38" data-title="蒸馏同事图片占位">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>把同事做成 Skill，到底在蒸馏什么？</h2><p style="margin-top:0.2rem"></p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">蒸馏</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">把经验拆出来，写成可复用的工作方法。</p></div>
+    <div class="content-main">
+      <div class="reveal" style="--i:2;display:flex;align-items:center;justify-content:center;height:52vh;">
+        <img src="./插图1.png" alt="蒸馏同事" style="max-width:100%;max-height:100%;object-fit:contain;border:2px solid rgba(0,0,0,0.12);background:rgba(255,255,255,.25);">
+      </div>
+    </div>
+  </section>
+
+<section class="slide slide-content" data-index="39" data-title="蒸馏什么">
     <div class="content-label"><span class="rule-accent"></span><div><h2>蒸馏的是工作方法</h2><p style="margin-top:0.2rem">程序性知识</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">提取一个 Skill，本质上是在提取稳定工作方法。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">显</span><div class="item-text"><h3>显性</h3><p>法条、案例——AI 已经认识。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">程</span><div class="item-text"><h3>程序性</h3><p>先看什么、先做什么——Skill 的主体。</p></div></div>
       <div class="item-row reveal" style="--i:4"><span class="item-index" style="color:var(--accent)">隐</span><div class="item-text"><h3 style="color:var(--accent)">隐性</h3><p>说不出的直觉——最难翻译，最有蒸馏价值。</p></div></div>
-      <div class="n">41</div>
+      <div class="n">39</div>
     </div>
   </section>
 
-  <!-- 43 蒸馏三步法 -->
-  <section class="slide slide-content" data-index="43" data-title="蒸馏三步法">
+<section class="slide slide-content" data-index="40" data-title="蒸馏三步法">
     <div class="content-label"><span class="rule-accent"></span><div><h2>蒸馏三步法</h2><p style="margin-top:0.2rem">把"隐性"变成"可执行"</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">改造产线，结果随之升级。先做起来，再校准。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>先让 AI 做</h3><p>别一开始就写完整 Skill。先让它跑，看哪里出问题。</p></div></div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>先让 AI 做</h3><p>先跑任务，再看哪里出问题；完整 Skill 可以在实践中逐步长出来。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>说哪里不满意</h3><p>AI 出错的地方，往往正是隐性经验所在。</p></div></div>
       <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>写进 Skill</h3><p>把"我是怎么做这一步的"翻译成步骤，补进去。</p></div></div>
-      <div class="n">42</div>
+      <div class="n">40</div>
     </div>
   </section>
 
-  <!-- 44 好Skill五件事 -->
-  <section class="slide slide-content" data-index="44" data-title="好Skill五件事">
+<section class="slide slide-content" data-index="41" data-title="好Skill五件事">
     <div class="content-label"><span class="rule-accent"></span><div><h2>一个好的 Skill，先看五件事</h2><p style="margin-top:0.2rem">Anthropic 最佳实践</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">5</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">只写大模型不知道的"特定上下文"。</p></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">5</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">写入大模型缺少的“特定上下文”。</p></div>
     <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem 2rem; align-content:center">
       <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>Description 具体（触发器）</h3></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>结构清楚（输入→步骤→输出）</h3></div></div>
@@ -1116,30 +1174,28 @@ h3{
     </div>
   </section>
 
-  <!-- 45 Skill Creator -->
-  <section class="slide slide-content" data-index="45" data-title="SkillCreator">
+<section class="slide slide-content" data-index="42" data-title="SkillCreator">
     <div class="content-label"><span class="rule-accent"></span><div><h2>Skill Creator · 设计顾问</h2><p style="margin-top:0.2rem">辅助整理设计思路</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">？</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">官方做的一个 Skill，辅助整理骨架、优化 description。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">追问</span><div class="item-text"><h3>它在追问什么</h3><p>解决什么任务？什么时候触发？怎么一步步做？什么放主文件/references/scripts？哪里必须人工看？</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">边界</span><div class="item-text"><h3>适用边界</h3><p>边界设计和隐性经验提炼，仍然需要专业经验进入表达。</p></div></div>
-      <div class="n">44</div>
+      <div class="n">42</div>
     </div>
   </section>
 
-  <!-- 46 案例期限管家 -->
-  <section class="slide slide-content" data-index="46" data-title="案例·期限管家">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>案例一 · 诉讼期限管家</h2><p style="margin-top:0.2rem">窄桥型：低自由度、强边界</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">1</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">Skill 让 AI 更守规矩——把边界写进流程，才敢放心交给它。</p></div>
+<section class="slide slide-content" data-index="43" data-title="案例·期限管家">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>案例一 · 四个期限管家</h2><p style="margin-top:0.2rem">高频、标准化、边界明确的小任务</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">期</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">收到法院文书，运行对应管家，生成期间表和待办。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">流程</span><div class="item-text"><h3>四步</h3><p>上传文书 → 识别类型/案号/日期 → 计算各项期间 → 输出期间表 + 待办 + 风险提示。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">硬规则</span><div class="item-text"><h3>蒸馏出的隐性知识</h3><p>"○"和"〇"两种写法都识别 · 程序不明默认普通程序并标注 · 节假日顺延无法确认标"需人工核实" · 信息缺失也不停掉整个流程。</p></div></div>
-      <div class="n">45</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">诉讼</span><div class="item-text"><h3>诉讼管家</h3><p>处理一审、二审常见文书，提取送达日期、答辩期、举证期、上诉期等。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">执行</span><div class="item-text"><h3>执行管家</h3><p>处理执行文书和保全措施期限，提醒续封、续冻等节点。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">仲裁</span><div class="item-text"><h3>劳动仲裁管家</h3><p>处理仲裁通知，识别答辩期、仲裁期限、起诉期等。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">待办</span><div class="item-text"><h3>待办管家</h3><p>统一读取任务中心，按今日、逾期、7 天内、30 天内展示待办。</p></div></div>
     </div>
   </section>
 
-  <!-- 47 案例文档分层 -->
-  <section class="slide slide-content" data-index="47" data-title="案例·文档分层">
+<section class="slide slide-content" data-index="44" data-title="案例·文档分层">
     <div class="content-label"><span class="rule-accent"></span><div><h2>案例二 · 文档阅读分层</h2><p style="margin-top:0.2rem">核心：四层分离</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">材料太乱直接丢 AI，它平等对待、毫无章法。先给它秩序。</p></div>
     <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
@@ -1151,112 +1207,73 @@ h3{
     </div>
   </section>
 
-  <!-- 48 MCP是什么 -->
-  <section class="slide slide-content" data-index="48" data-title="MCP是什么">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>MCP · AI 的"USB 接口"</h2><p style="margin-top:0.2rem">Model Context Protocol</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">⊏⊐</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">Anthropic 2024 开源。</p></div>
+<section class="slide slide-content" data-index="45" data-title="MCP是什么">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>MCP · AI 的“USB 接口”</h2><p style="margin-top:0.2rem">Model Context Protocol</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">⊏⊐</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">它解决的是连接标准问题。</p></div>
     <div class="content-main">
-      <p class="reveal mcp-lead" style="--i:2">有些活卡在 AI 没数据、没工具、碰不到外部系统。电脑靠 USB 接外设，AI 靠 MCP 接外部工具和数据源——一套统一的连接标准。</p>
-      <div class="n">47</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">模型</span><div class="item-text"><h3>模型推理能力</h3><p>理解、规划、生成、归纳。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">工具</span><div class="item-text"><h3>外部数据 / 工具</h3><p>法律数据库、企业数据、文件系统、浏览器。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">上下文</span><div class="item-text"><h3>本地上下文</h3><p>案卷、合同、表格、工作目录。</p></div></div>
     </div>
   </section>
 
-  <!-- 49 MCP四层 -->
-  <section class="slide slide-content" data-index="49" data-title="MCP四层">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>MCP · 四层结构</h2><p style="margin-top:0.2rem">它怎么运转</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">Server 暴露三类：资源（可读）· 工具（可执行）· 提示词（模板）。</p></div>
-    <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">01</span><div class="item-text"><h3>Host</h3><p>AI 应用</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">02</span><div class="item-text"><h3>Client</h3><p>连接模块</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">03</span><div class="item-text"><h3>Server</h3><p>外部服务</p></div></div>
-      <div class="item-row reveal" style="--i:5"><span class="item-index">04</span><div class="item-text"><h3>External</h3><p>真实系统</p></div></div>
-    </div>
-  </section>
-
-  <!-- 49b 配置像下载应用 -->
-  <section class="slide slide-content" data-index="50" data-title="MCP配置">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>现在，像"下载应用"一样方便</h2><p style="margin-top:0.2rem">怎么配置</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">装</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">常用的放用户级；某案专用的放项目级。一个 Token，多处通用。</p></div>
+<section class="slide slide-content" data-index="46" data-title="好用的MCP">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>律师值得先接的几类 MCP</h2><p style="margin-top:0.2rem">从只读、可追溯的工具开始</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">跑顺以后，再扩展到写入和自动操作。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">早期</span><div class="item-text"><h3>敲命令行</h3><p>在命令行里建应用、拿 Token、写配置——10 分钟能跑通，但有门槛。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index" style="color:var(--accent)">现在</span><div class="item-text"><h3 style="color:var(--accent)">内置 MCP 市场</h3><p>WorkBuddy、Qoder、Trae 等把 MCP 集成进界面——点一下就装，配置由产品界面接管。</p></div></div>
-      <div class="n">49</div>
-    </div>
-  </section>
-
-  <!-- 49c 哪些好用MCP -->
-  <section class="slide slide-content" data-index="51" data-title="好用的MCP">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>律师值得先装的几类 MCP</h2><p style="margin-top:0.2rem">先从"只读"的装起</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">4</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">跑顺了再加能写、能发的。</p></div>
-    <div class="content-main" style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 2rem; align-content:center">
       <div class="item-row reveal" style="--i:2"><span class="item-index">法</span><div class="item-text"><h3>法律数据库</h3><p>北大法宝 · 华宇元典</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">企</span><div class="item-text"><h3>企业尽调</h3><p>企查查 · 天眼查</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">办</span><div class="item-text"><h3>办公协作</h3><p>飞书 · 腾讯文档</p></div></div>
-      <div class="item-row reveal" style="--i:5"><span class="item-index">通</span><div class="item-text"><h3>通用</h3><p>浏览器 · 文件系统 · 搜索</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">文</span><div class="item-text"><h3>文件与知识库</h3><p>本地文件系统 · 内部知识库</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">通</span><div class="item-text"><h3>通用工具</h3><p>浏览器 · 搜索 · 表格</p></div></div>
     </div>
   </section>
 
-  <!-- 50 北大法宝MCP -->
-  <section class="slide slide-content" data-index="52" data-title="北大法宝MCP">
+<section class="slide slide-content" data-index="47" data-title="北大法宝MCP">
     <div class="content-label"><span class="rule-accent"></span><div><h2>北大法宝 MCP</h2><p style="margin-top:0.2rem">让权威数据库进入文档工作流</p></div><div class="label red" style="margin-left:auto">04 · Skill / MCP / CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">例</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">底线：脱敏 · 点链接核验效力 · 仍在试用期。</p></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">法</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">北大法宝 MCP。</p></div>
     <div class="content-main">
-      <p class="reveal" style="--i:2">大模型与法律数据库分工各异。北大法宝做"插头"，Agent 做"插座"，一插上 ＝ 模型推理 + 法宝权威数据 + 本地案卷上下文。</p>
-      <div class="reveal" style="--i:3; display:flex; gap:1.2rem; flex-wrap:wrap; font-family:var(--f-body); font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.03em"><span>语义检索</span><span>·</span><span>精准定位法条</span><span>·</span><span>溯源链接</span><span>·</span><span>幻觉纠偏</span></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">闭环</span><div class="item-text"><p>@案卷 → 调法宝 → 5 分钟出"诉请归纳 + 法律依据 + 可点链接"，全程 IDE 内闭环。现已可在 Cursor、Claude、WorkBuddy、Qoder 等接入。</p></div></div>
-      <div class="n">51</div>
+      <p class="bio-line">大模型与法律数据库分工各异。北大法宝做“插头”，Agent 做“插座”，一插上就是：模型推理 + 法宝权威数据 + 本地案卷上下文。</p>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">能力</span><div class="item-text"><h3>语义检索 · 精准定位法条 · 溯源链接 · 幻觉纠偏</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">闭环</span><div class="item-text"><h3>@案卷 → 调法宝 → 形成研究初稿</h3><p>诉请归纳、法律依据、可点链接。</p></div></div>
     </div>
   </section>
 
-  <!-- 51 三件套 -->
-  <section class="slide" data-index="53" data-title="三件套" style="display:flex; flex-direction:column">
-    <div class="take-header"><span class="rule-accent"></span><div class="label">04 · Skill / MCP 小结</div></div>
-    <div class="take-body"><div>
-      <div class="take-quote reveal" style="--i:0; font-size:clamp(1.6rem,3.4vw,3rem)">Skill 管<em>怎么做</em>，<br>知识库管<em>参考什么</em>，<br>MCP 管<em>接触什么</em>。</div>
-      <p class="reveal" style="--i:1; margin-top:1.5rem">这一段先收住 Skill 与 MCP；接下来单独看 CLI 作为本地工具入口。</p>
-    </div></div>
-    <div class="n">52</div>
-  </section>
-
-  <!-- CLI practical tools -->
-  <section class="slide slide-content" data-index="54" data-title="CLI工具入口">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>CLI · 单独讲一个入口</h2><p style="margin-top:0.2rem">把本地工具、云平台和 AI 放到同一条工作流</p></div><div class="label red" style="margin-left:auto">04 · CLI</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">CLI</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">CLI 是工具入口，脚本只是把工具串起来。</p></div>
+<section class="slide slide-content" data-index="48" data-title="CLI工具入口">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>CLI · 本地工具入口</h2><p style="margin-top:0.2rem">把本地程序、云平台和 AI 放到同一条工作流</p></div><div class="label red" style="margin-left:auto">04 · CLI</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">CLI</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">CLI 是命令行入口，脚本只是把工具串起来。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">协作</span><div class="item-text"><h3>飞书 / Lark CLI</h3><p>读取云文档、上传下载云盘文件、处理表格和任务，把协作平台变成可调用入口。</p></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">留痕</span><div class="item-text"><h3>Git / GitHub CLI</h3><p>合同版本、文章稿、课件、办案模板进入可追踪的版本流。</p></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">材料</span><div class="item-text"><h3>Pandoc · qpdf / pdftk · ffmpeg</h3><p>文档转换、PDF 拆分合并、音视频抽取，本质上调用的是这些命令行工具。</p></div></div>
-      <div class="n">53</div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">Office</span><div class="item-text"><h3>Office CLI / LibreOffice CLI</h3><p>批量导出、格式转换、PDF 生成，把办公文件处理纳入自动流程。</p></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">留痕</span><div class="item-text"><h3>Git / GitHub CLI</h3><p>合同版本、文章稿、课件、办案模板进入可追踪的版本流。</p></div></div>
+      <div class="item-row reveal" style="--i:5"><span class="item-index">材料</span><div class="item-text"><h3>Pandoc · qpdf · ffmpeg</h3><p>文档转换、PDF 拆分合并、音视频抽取，本质上调用这些命令行工具。</p></div></div>
     </div>
   </section>
-  <!-- Part 5 -->
-  <section class="slide slide-part" data-index="55" data-title="第五部分">
+
+<section class="slide slide-part" data-index="49" data-title="未来竞争力">
     <div class="part-header"><div class="label red">Part 05</div><div class="label">未来竞争力</div></div>
     <div class="part-body">
       <div class="part-num">05</div>
       <div class="part-title-block">
         <span class="rule-accent" style="margin-bottom:1.2rem; display:block"></span>
         <h2 class="reveal" style="--i:0">未来<br><span style="color:var(--accent)">竞争力</span></h2>
-        <div class="part-progress reveal" style="--i:1; margin-top:1.5rem"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg active"></div></div>
+        <div class="part-progress reveal" style="--i:1; margin-top:1.5rem"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg"></div></div>
         <p class="reveal" style="--i:2; margin-top:0.8rem">当 AI 能交付任务，律师的核心价值是什么</p>
       </div>
     </div>
   </section>
 
-  <!-- 53 任务vs目的 -->
-  <section class="slide slide-content" data-index="56" data-title="任务vs目的">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>AI 替的是"任务"，凸显"目的"</h2><p style="margin-top:0.2rem">黄仁勋的框架</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
+<section class="slide slide-content" data-index="50" data-title="任务vs目的">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>AI 替的是"任务"，凸显"目的"</h2><p style="margin-top:0.2rem">任务与目的</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">≠</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">放射科医生的目的核心价值在诊断病人，是诊断病人——AI 进来后人数不减反增。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">任务</span><div class="item-text"><h3>写文书 · 检索案例 · 审合同 · 整理证据</h3></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index" style="color:var(--accent)">目的</span><div class="item-text"><h3 style="color:var(--accent)">达成有效沟通 · 研判裁判风向 · 识别真实交易风险 · 把混乱事实变成办案叙事</h3></div></div>
       <p class="reveal" style="--i:4">关键在于是否清楚“为什么要写”。</p>
-      <div class="n">55</div>
+      <div class="n">50</div>
     </div>
   </section>
 
-  <!-- 54 打螺丝 -->
-  <section class="slide slide-content" data-index="57" data-title="打螺丝">
+<section class="slide slide-content" data-index="51" data-title="打螺丝">
     <div class="content-label"><span class="rule-accent"></span><div><h2>AI 处理标准件</h2><p style="margin-top:0.2rem">但螺丝是局部的</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">均值</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">"螺丝是局部的，解决方案是整体的。拧紧螺丝、发动机器，才是最要紧的。"</p></div>
     <div class="content-main">
@@ -1270,80 +1287,73 @@ h3{
           <text x="610" y="122" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="12" font-weight="700" fill="var(--accent)">附加值＝人</text>
         </svg>
       </div>
-      <div class="n">56</div>
+      <div class="n">51</div>
     </div>
   </section>
 
-  <!-- 55 判断力三层 -->
-  <section class="slide slide-content" data-index="58" data-title="判断力三层">
+<section class="slide slide-content" data-index="52" data-title="判断力三层">
     <div class="content-label"><span class="rule-accent"></span><div><h2>AI 射程之外的判断力</h2><p style="margin-top:0.2rem">留给人的，是这三件</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
     <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">3</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">合起来，就是大家挂在嘴边的"判断力"。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">①</span><div class="item-text"><h3>定义问题</h3><p>从一团事实、情绪、利益里，找到真正要解决的症结。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">②</span><div class="item-text"><h3>做判断</h3><p>在标准答案缺席的现实里，做取舍、给非标方案。</p></div></div>
       <div class="item-row reveal" style="--i:4"><span class="item-index">③</span><div class="item-text"><h3>承担后果</h3><p>为这个判断，承担专业责任——牌照、责任心、信任。</p></div></div>
-      <div class="n">57</div>
+      <div class="n">52</div>
     </div>
   </section>
 
-  <!-- 56 定义问题 -->
-  <section class="slide slide-content" data-index="59" data-title="定义问题">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>① 定义问题</h2><p style="margin-top:0.2rem">客户送来的，常是他"误诊"后的结论</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">①</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">彭帅：律师是解决社会问题的法律专家。</p></div>
+<section class="slide slide-content" data-index="53" data-title="定义问题">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>① 定义问题</h2><p style="margin-top:0.2rem">客户送来的，常是他“误诊”后的结论</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">问</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">律师是解决社会问题的法律专家。</p></div>
     <div class="content-main">
-      <p class="reveal" style="--i:2">他坚持"要告对方违约"，真正要的也许只是尽快拿回款，或一个能体面退出的台阶。问题定义错了，后面再漂亮的分析都是"精致的偏航"。</p>
-      <div class="reveal" style="--i:3; font-family:var(--f-display); font-size:clamp(1.3rem,2.6vw,2rem); line-height:1.15; max-width:680px; border-left:4px solid var(--accent); padding-left:1.2rem">AI 只能处理被喂进去的显性文字，而人能闻到空气里看不见的火药味。</div>
-      <div class="n">58</div>
+      <p class="bio-line">他坚持“要告对方违约”，真正要的也许只是尽快拿回款，或一个能体面退出的台阶。</p>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">关键</span><div class="item-text"><h3>问题定义错了，后面再漂亮的分析都是精致的偏航。</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">现实</span><div class="item-text"><h3>AI 只能处理被喂进去的显性文字，而人能闻到空气里看不见的火药味。</h3></div></div>
     </div>
   </section>
 
-  <!-- 57 哈特 -->
-  <section class="slide slide-content" data-index="60" data-title="哈特">
-    <div class="content-label"><span class="rule-accent"></span><div><h2>② 做判断 · "禁止车辆通行"</h2><p style="margin-top:0.2rem">法律的"开放结构"</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">②</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">适用法律要把规则放回真实社会场景——组装方案仍需律师完成。</p></div>
+<section class="slide slide-content" data-index="54" data-title="哈特">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>② 做判断 · 法律的开放结构</h2><p style="margin-top:0.2rem">H. L. A. Hart，《法律的概念》</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">Hart</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">开放结构：规则语言有确定适用，也会遇到疑难情形。</p></div>
     <div class="content-main">
-      <div class="item-row reveal" style="--i:2"><span class="item-index">？</span><div class="item-text"><h3>小孩骑脚踏车，算吗？</h3></div></div>
-      <div class="item-row reveal" style="--i:3"><span class="item-index">？</span><div class="item-text"><h3>救人的救护车，能进吗？</h3></div></div>
-      <div class="item-row reveal" style="--i:4"><span class="item-index">？</span><div class="item-text"><h3>展出的二战旧坦克，算"车辆"吗？</h3></div></div>
-      <div class="n">59</div>
+      <div class="item-row reveal" style="--i:2"><span class="item-index">出处</span><div class="item-text"><h3>英国法学家哈特在《法律的概念》中讨论法律语言的开放结构。</h3></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">例子</span><div class="item-text"><h3>公园门口写着“禁止车辆通行”。汽车属于车辆，判断很容易。</h3></div></div>
+      <div class="item-row reveal" style="--i:4"><span class="item-index">疑难</span><div class="item-text"><h3>小孩骑脚踏车、救护车进公园、退役坦克展出，这些都开始进入解释和判断。</h3></div></div>
     </div>
   </section>
 
-  <!-- 58 承担后果 -->
-  <section class="slide slide-content" data-index="61" data-title="承担后果">
+<section class="slide slide-content" data-index="55" data-title="承担后果">
     <div class="content-label"><span class="rule-accent"></span><div><h2>③ 承担后果 · 这一层永远是人</h2><p style="margin-top:0.2rem">判断力的源头</p></div><div class="label red" style="margin-left:auto">05 · 未来竞争力</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">③</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">AI 能算出胜诉概率，但它无法看着客户的眼睛，给"有人和我一起扛"的确定感。</p></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">③</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">胜诉概率之外，还有看着客户眼睛承担责任的确定感。</p></div>
     <div class="content-main">
       <div class="item-row reveal" style="--i:2"><span class="item-index">牌照</span><div class="item-text"><p>签字、出庭、发函，绑定执业声誉与责任。</p></div></div>
       <div class="item-row reveal" style="--i:3"><span class="item-index">责任心</span><div class="item-text"><p>大半夜惊醒，蹦出一个没考虑过的风险点；和当事人像战友，同呼吸共命运。</p></div></div>
       <div class="item-row reveal" style="--i:4"><span class="item-index">信任</span><div class="item-text"><p>客户让渡的是风险和焦虑，律师提供的是“有人一起扛”的确定感。</p></div></div>
-      <div class="n">60</div>
+      <div class="n">55</div>
     </div>
   </section>
 
-  <!-- 61 竞争力公式 -->
-  <section class="slide" data-index="62" data-title="竞争力公式" style="display:flex; flex-direction:column">
-    <div class="take-header"><span class="rule-accent"></span><div class="label">05 · 回到第二条线</div></div>
-    <div class="take-body"><div>
-      <div class="reveal" style="--i:0; font-family:var(--f-display); font-size:clamp(1.6rem,3.6vw,3rem); line-height:1.1">未来竞争力 ＝<br><span style="color:var(--accent)">AI</span>（完成任务） × <span style="color:var(--accent)">律师</span>（定义问题·承担判断·安顿信任）</div>
-      <p class="reveal" style="--i:1; margin-top:1.2rem; max-width:640px">乘号表达相互放大：判断力归零，整体归零。AI 越能完成任务，律师越要把问题定义、判断承担和信任安顿说清楚、做扎实。</p>
-    </div></div>
-    <div class="n">61</div>
+<section class="slide slide-content" data-index="56" data-title="竞争力公式">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>未来竞争力公式</h2><p style="margin-top:0.2rem">AI（完成任务）× 律师（定义问题 · 承担判断 · 安顿信任）</p></div><div class="label red" style="margin-left:auto">05 · 回到第二条线</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">×</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">乘号表达相互放大：判断力归零，整体归零。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">AI</span><div class="item-text"><h3>完成任务</h3><p>检索、整理、生成、比对、格式化。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">律师</span><div class="item-text"><h3>定义问题 · 承担判断 · 安顿信任</h3><p>在真实关系、真实风险和真实后果里作出选择。</p></div></div>
+    </div>
   </section>
 
-  <!-- 62 收尾 -->
-  <section class="slide" data-index="63" data-title="收尾" style="display:flex; flex-direction:column">
-    <div class="take-header"><span class="rule-accent"></span><div class="label">Takeaway</div><div class="label red" style="margin-left:auto">AI 歧路花园</div></div>
-    <div class="take-body"><div>
-      <div class="take-quote reveal" style="--i:0">AI 把活干完，<br>我们守住<br>那份<em>值得被信任的判断</em>。</div>
-      <p class="reveal" style="--i:1; margin-top:1.5rem; max-width:620px">未来更稀缺的，也许是用 AI 放大判断力的律师。这条路慢一点，但走得通。</p>
-    </div></div>
-    <div class="n">62</div>
+<section class="slide slide-content" data-index="57" data-title="收尾">
+    <div class="content-label"><span class="rule-accent"></span><div><h2>Takeaway</h2><p style="margin-top:0.2rem">AI 把活干完，律师守住值得被信任的判断。</p></div><div class="label red" style="margin-left:auto">收尾</div></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">AI</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">未来更稀缺的，也许是用 AI 放大判断力的律师。</p></div>
+    <div class="content-main">
+      <div class="item-row reveal" style="--i:2"><span class="item-index">协作</span><div class="item-text"><h3>高效协作公式</h3><p>拆解 × 约束 × 校验 × 沉淀。</p></div></div>
+      <div class="item-row reveal" style="--i:3"><span class="item-index">竞争力</span><div class="item-text"><h3>未来竞争力公式</h3><p>AI（完成任务）× 律师（定义问题 · 承担判断 · 安顿信任）。</p></div></div>
+    </div>
   </section>
-  <!-- 63 谢谢 · 联系方式 -->
-  <section class="slide slide-content" data-index="64" data-title="谢谢">
+
+<section class="slide slide-content" data-index="58" data-title="谢谢">
     <div class="content-label"><span class="rule-accent"></span><div><h2>谢谢 · 欢迎交流</h2><p style="margin-top:0.2rem">AI 歧路花园 · Mira魔法研究员</p></div><div class="label red" style="margin-left:auto">杜思敏</div></div>
-    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">QR</div><div class="rule-h" style="background:var(--accent)"></div><p class="reveal" style="--i:1">扫码交流与关注。</p></div>
+    <div class="content-sidebar"><div class="sidebar-num reveal" style="--i:0">QR</div><div class="rule-h" style="background:var(--accent)"></div></div>
     <div class="content-main" style="justify-content:center">
       <div class="qr-grid">
         <div class="qr-card reveal primary" style="--i:2">
@@ -1361,7 +1371,6 @@ h3{
       </div>
     </div>
   </section>
-
 </div>
 
 <nav class="nav" id="nav"></nav>
